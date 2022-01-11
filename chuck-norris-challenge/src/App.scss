@@ -1,14 +1,6 @@
-
-
+//This is the styling for my header. I fixed it to the screen, so if the content is longer the header will be there and the rest will scroll
 .App-header {
   background-color: #282c34;
-  // min-height: 10vh;
-  // padding: 1px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  // font-size: calc(10px + 2vmin);
   color: white;
   position: fixed;
   top: 0;
@@ -17,6 +9,7 @@
   text-align: center;
 }
 
+//This is the left navbar which is also fixed and get hidden on small screens as requested
 .App-nav {
   display: none;
   background-color: rgba($color: greenyellow, $alpha: .7);
@@ -25,37 +18,40 @@
   top: 86px;
   min-height: 100%;
   padding: 10px;
-
   @media only screen and (min-width: 680px) {
     display: block;
-  
-  }
+}
 }
 
+//I have added some style for the ul elements if any are added
 ul {
   padding-left: 0;
   min-width: 10vw
 }
 
+//I have removed the bullet points from the li elements if needed in future
 li {
   list-style-type: none;
 }
 
+//This is the main content. I have added some margins to make sure it looks nice on any screen size
 .App-main {
   margin: 10px;
   margin-top: 100px;
   @media only screen and (min-width: 680px) {
     margin-left: 15vw;
-  
-  }
+}
 }
 
+//I added some height to the container so the buttons are static for most of the jokes. Does not cover some very long ones but I felt it looks better if the buttons are fixed
 .joke-container {
-   min-height: 238px;
-
+  min-height: 150px;
+  @media only screen and (min-width: 680px) {
+    min-height: 140px;
+}
 }
 
-
+//This is the styling of my buttons
 button {
   color: white;
   background-color: #282c34;
@@ -65,8 +61,10 @@ button {
   margin: 10px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
 }
 
+//Hover effect for the buttons
 button:hover {
   background-color: lighten($color: #282c34, $amount: 20);
 }
@@ -75,11 +73,13 @@ button:hover {
   background-color: darken($color: greenyellow, $amount: 20);
 }
 
+//This is the position of the buttons styling. I made them flex in order to look nice regardless of how many are visible
 .buttons {
   display: flex;
   justify-content: start;
 }
 
+//This is the styling of the main button
 .newJoke {
   background-color: greenyellow;
   color: black;

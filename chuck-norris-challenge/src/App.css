@@ -43,7 +43,12 @@ li {
 }
 
 .joke-container {
-  min-height: 238px;
+  min-height: 150px;
+}
+@media only screen and (min-width: 680px) {
+  .joke-container {
+    min-height: 140px;
+  }
 }
 
 button {
@@ -55,6 +60,7 @@ button {
   margin: 10px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
 }
 
 button:hover {
