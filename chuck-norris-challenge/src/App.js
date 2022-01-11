@@ -17,7 +17,6 @@ function App() {
   useEffect(() => {
     if (joke.length > 0) {
       setPointer(joke.length - 1)
-
     }
   }, [joke]);
 
@@ -42,7 +41,6 @@ function App() {
     const result = await axios.get('https://api.chucknorris.io/jokes/random');
     setJoke([...joke, result.data.value]);
     setNextBtnShown(false)
-    console.log(joke)
     if (joke.length > 0) {
       setPrevBtnShown(true);
     }
